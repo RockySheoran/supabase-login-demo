@@ -5,6 +5,7 @@ export interface User {
   name?: string;  // Made optional with ?
   avatar?: string;
   provider?: string;
+  avatar_url?: string | null;
 }
 
 export interface JwtPayload {

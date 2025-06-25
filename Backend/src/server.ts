@@ -39,7 +39,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Routes
-app.use('/api/auth', authRoutes);
+app.use('/auth', authRoutes);
 
 // 404 handler (must be after all other routes)
 app.use(notFoundHandler);
