@@ -7,11 +7,14 @@ if (!supabaseUrl || !supabaseKey) {
   throw new Error('Supabase URL and Key must be provided in .env file');
 }
 
-export const supabase = createClient(supabaseUrl, supabaseKey,{
+export const supabase = createClient(supabaseUrl, supabaseKey
+  ,{
     auth: {
-      flowType: 'pkce', // Recommended for security
+      flowType: 'pkce', 
       autoRefreshToken: true,
       detectSessionInUrl: true,
       persistSession: true,
     }
-  });
+  }
+
+);
